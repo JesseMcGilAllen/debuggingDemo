@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DebuggingDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWd-6b-I6e">
+                                <rect key="frame" x="194" y="132" width="30" height="30"/>
+                                <state key="normal" title="Left"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-QE-hGS">
+                                <rect key="frame" x="392" y="132" width="36" height="30"/>
+                                <state key="normal" title="Right"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRn-Pu-Xjv">
+                                <rect key="frame" x="285" y="61" width="30" height="30"/>
+                                <state key="normal" title="Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wia-mJ-g2W">
+                                <rect key="frame" x="281" y="214" width="39" height="30"/>
+                                <state key="normal" title="Down"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsI-7a-yBm">
+                                <rect key="frame" x="277" y="132" width="47" height="30"/>
+                                <state key="normal" title="Center"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HsI-7a-yBm" firstAttribute="leading" secondItem="YRn-Pu-Xjv" secondAttribute="leading" id="IcT-5C-ryI"/>
+                            <constraint firstItem="HsI-7a-yBm" firstAttribute="centerX" secondItem="Wia-mJ-g2W" secondAttribute="centerX" id="Jma-w8-i1j"/>
+                            <constraint firstItem="HsI-7a-yBm" firstAttribute="centerX" secondItem="YRn-Pu-Xjv" secondAttribute="centerX" id="RFi-vd-sNn"/>
+                            <constraint firstItem="HsI-7a-yBm" firstAttribute="centerY" secondItem="j8s-QE-hGS" secondAttribute="centerY" id="SI0-xH-Wmb"/>
+                            <constraint firstItem="wWd-6b-I6e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="166" id="W0T-Pc-4FN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wia-mJ-g2W" secondAttribute="bottom" constant="356" id="cMF-PY-YNl"/>
+                            <constraint firstItem="YRn-Pu-Xjv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="wEm-pz-MMV"/>
+                            <constraint firstItem="HsI-7a-yBm" firstAttribute="centerY" secondItem="wWd-6b-I6e" secondAttribute="centerY" id="wJV-Z6-baC"/>
+                            <constraint firstItem="HsI-7a-yBm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="woR-Ls-fQd"/>
+                            <constraint firstItem="j8s-QE-hGS" firstAttribute="leading" secondItem="HsI-7a-yBm" secondAttribute="trailing" constant="68" id="z9k-S5-7wl"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
